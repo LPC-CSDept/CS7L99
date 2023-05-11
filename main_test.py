@@ -17,13 +17,11 @@ def test_main_1():
     lines = captureOut.getvalue().split('\n')
     print(lines)
 
-    zobj = main.main()
-    lst = list(zobj)
-
-    assert len(lst) == 3
-    assert lst[0] == (1001, 'C Programming')
-    assert lst[1] == (1002, 'Java Programming')
-    assert lst[2] == (1003, 'Python Programming')
+    students = main.main()
+    assert len(students) == 3
+    assert students[0] == {'id': 10, 'name': 'Kim', 'address': '123 Main'}
+    assert students[1] == {'id': 20, 'name': 'Bill', 'address': '345 Grand'}
+    assert students[2] == {'id': 30, 'name': 'Mary', 'address': '123 Blvd'}
 
     # regex_string = r'[\w,\W]*1'
     # regex_string += r'[\w,\W]*3'

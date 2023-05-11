@@ -1,11 +1,24 @@
 def main():
-    IDs = [1001, 1002, 1003]
-    Names = ['C Programming', 'Java Programming', 'Python Programming']
+    heading = ['id', 'name', 'address']
+    valueset = [[10, 'Kim', '123 Main'],
+                [20, 'Bill', '345 Grand'],
+                [30, 'Mary', '123 Blvd']
+                ]
 
-    for zobj in zip(IDs, Names):
-        print(zobj)
+    students = []
+    #########################################
+    # Code your program here
+    #########################################
 
-    return zip(IDs, Names)
+    #########################################
+    for v in students:
+        print(v)
+    return students
+    #########################################
+    # students
+    # [{'id': 10, ‘name': 'Kim', 'Address': ‘123 Main’},
+    # {'id': 20, 'nameI': 'Bill', ‘Address': '345 Grand'},
+    # {'id': 30, 'name': 'Mary', 'Address': '123 Blvd'}]
 
 
 if __name__ == '__main__':
