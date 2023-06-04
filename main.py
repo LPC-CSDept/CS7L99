@@ -1,3 +1,16 @@
+def makeDict(heading, valueset):
+    """
+    ########################################
+    Code Your Program here
+    ########################################
+    """
+    students = []
+
+    for i in range(len(valueset)):
+        students.append(dict(zip(heading, valueset[i])))
+    return students
+
+
 def main():
     heading = ['id', 'name', 'address']
     valueset = [[10, 'Kim', '123 Main'],
@@ -5,15 +18,12 @@ def main():
                 [30, 'Mary', '123 Blvd']
                 ]
 
-    students = []
+    students = makeDict(heading, valueset)
     #########################################
-    # Code your program here
-    #########################################
-
-    #########################################
-    for v in students:
-        print(v)
-    return students
+    for st in students:
+        for k, v in st.items():
+            print(f'{k} -> {v}\t', end=' ')
+        print()
     #########################################
     # students
     # [{'id': 10, ‘name': 'Kim', 'Address': ‘123 Main’},
